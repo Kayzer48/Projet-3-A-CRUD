@@ -1,0 +1,1 @@
+//*page de suppression d’un produit 
