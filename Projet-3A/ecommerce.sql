@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 21 jan. 2021 à 16:00
+-- Généré le : mer. 27 jan. 2021 à 14:33
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -35,17 +35,17 @@ CREATE TABLE IF NOT EXISTS `produits` (
   `image_produit` varchar(250) NOT NULL,
   `prix_produit` decimal(10,2) NOT NULL,
   PRIMARY KEY (`id_produit`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `produits`
 --
 
 INSERT INTO `produits` (`id_produit`, `nom_produit`, `description_produit`, `image_produit`, `prix_produit`) VALUES
-(1, 'Mac Book Air', 'Mac Book Air 15\"', 'img/macbook.jpg', '1199.99'),
+(1, 'Macbook ', 'Macbook', 'img/macbook.jpg', '1199.00'),
 (2, 'Horloge Vintage URSS', 'Horloge Vintage URSS\r\nSuperbe horloge russe des années 1980 en parfait état de marche. \r\nL’une de ses particularité, elle ne fait aucun bruit.\r\nQuelques traces du temps. Numérotée.', 'img/horloge.jpg', '100.00'),
-(3, 'Mug Vintage CUBA', 'Mug Vintage CUBA\r\nUn mug qui vous donnera des envies de révolution...', 'img/mug.jpg', '14.99'),
-(4, 'Cafetière italienne', 'Cafetière italienne, pour vous préparez un café de qualité', 'img/cafetiere.jpg', '29.99');
+(17, 'Mug Vintage CUBA', 'Mug Vintage CUBA', 'img/mug.jpg', '15.00'),
+(18, 'Cafetière italienne', 'Cafetière italienne', 'img/cafetiere.jpg', '30.00');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

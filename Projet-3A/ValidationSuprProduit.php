@@ -1,3 +1,4 @@
+ 
 <?php
 $templateindex;
 //on démarre une session, le fait d'utiliser session_start permet d'utiliser la super globale $session
@@ -95,19 +96,9 @@ if (!$test){
             ?>
        
             <h1 class="text-center">Le Marché du coin</h1>
-            </br>   
-                   <div container>
-                   <div class="row">
-                   <div class="col text-start"> 
-                    <a href="ajouteProduit.php" class="btn btn-primary">Ajouter un produit</a>                    
-                  </div>
-                   <div class="col text-end"> 
-                    <a href="close.php" class="btn text-light btn-warning">Déconnexion</a>
-                  </div>
-                  
-                </div>
             </br>
-            <table class="table table-striped table-dark"> 
+            <h2 class="text-danger">Vous êtes sur le point de supprimer ce produit, êtes-vous sûr ?</h2>
+            <table class="table table-striped table-danger"> 
                         <thead class="text-center"> 
                             <th>id_produit</th>
                             <th>nom_produit</th>
@@ -115,8 +106,7 @@ if (!$test){
                             <th>image_produit</th>
                             <th>prix_produits</th>
                             <th></th> 
-                            <th>Editer</th>
-                            <th>Supprimer</th>
+                            <th></th> 
                         </thead>
                         <tbody>
 
@@ -126,13 +116,11 @@ if (!$test){
                                     <td><h2><?= $test['description_produit'] ?></h2></td>
                                     <td><img src="<?= $test['image_produit'] ?>" alt="<?= $test['nom_produit'] ?>" title="<?= $test['nom_produit'] ?>"class="img-thumbnail"></td>
                                     <td><h2><?= $test['prix_produit'] ?>€</h2></td>
-                                    <td><a href="index.php" class="btn btn-light">Retour</a></td>
-                                    <td><a href="majProduit.php?id=<?=$test['id_produit']?>"class="btn btn-success">Editer</a></td>
-                                    <td><a href="suprProduit.php?id=<?=$test['id_produit']?>"class="btn btn-danger" Onclick="return confirm('Voulez-vous vraiment supprimer ce produit');">Supprimer</a></td>
-                                </tr>    
-                                                                           
+                                    <td><a href="index.php" class="btn btn-light">Retour</a></td> 
+                                    <td><a href="suprProduit.php?id=<?=$test['id_produit']?>"class="btn btn-danger">Supprimer</a></td>          
+                                </tr>                                
                         </tbody>
-                </table>
+                </table>  
             </section>
         </div>
     </div>

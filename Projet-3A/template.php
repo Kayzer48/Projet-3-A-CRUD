@@ -1,4 +1,4 @@
-//*template
+//*template à faire
 <!DOCTYPE html>
 <html lang="fr">
     <head>

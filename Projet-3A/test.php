@@ -92,59 +92,56 @@ require_once('close.php');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </head>
   <body>
-  <h1 class="text-center">Le Marché du coin</h1>
-  </br>
-   <table class="table table-striped table-dark "> 
-                        <thead class="text-center"> 
-                            <th>id_produit</th>
-                            <th>nom_produit</th>
-                            <th>description_produit</th>
-                            <th>image_produit</th>
-                            <th>prix_produits</th>      
-                            <th></th> 
-                        </thead>
-                        <tbody>
-                         
-                                <tr class="text-center">
-                                    <td><?= $test['id_produit'] ?> </td>
-                                    <td><?= $test['nom_produit'] ?></td>
-                                    <td><?= $test['description_produit'] ?></td>
-                                    <td><img src="<?= $test['image_produit'] ?>" alt="<?= $test['nom_produit'] ?>" title="<?= $test['nom_produit'] ?>"class="img-thumbnail"></td>
-                                    <td><?= $test['prix_produit'] ?>€</td>
-                                    
-                                   
-                                    <td><a href="index.php" class="btn btn-light">Retour</a></td>
-                                    
-                                </tr>    
-                                                                           
-                        </tbody>
-                </table>
-
-                    
-                <h2 class="text-center">Modifier un produit</h2>             
-  <form method="post">
-    <label for="nom_produit"class=" h4 text-center">Produit:</label>
-    <input type="text" name="nom_produit" id="nom_produit" textarea class="form-control" value="<?=$test['nom_produit']?>">
-    </br>
-    <label for="description_produit" class=" h4 text-center">Description:</label>
-    <input type="text" name="description_produit" id="description_produit" textarea class="form-control form-control-lg" value="<?=$test['description_produit']?>">
-    </br>
-    <label for="image_produit" class=" h4 text-center">Image:</label>
-    <input type="text" name="image_produit" id="image_produit" textarea class="form-control" value="<?=$test['image_produit']?>">
-    </br>
-    <label for="prix_produit" class=" h4 text-center">Prix:</label>
-    <input type="text" name="prix_produit" id="prix_produit" textarea class="form-control" value="<?=$test['prix_produit']?>">
-    <input type="hidden" value="<?=$test['id_produit']?>">
-    </br>
-    <div container>
-                   <div class="row">
-                   <div class="col text-center"> 
-    <button class="btn btn-success btn-lg">Valider</button>
+  <h1>Modifier un produit</h1>
+  <!-- <form method="post">
+    <div class="form-group">
+      <label for="nom_produit">Produit</label>
+      <input type="text" name="nom_produit" id="nom_produit" textarea class="form-control-plaintext " value="">
     </div>
+    <div class="form-group">
+      <label for="description_produit">Description</label>
+      <input type="text" name="description_produit" id="description_produit" textarea class="form-control-plaintext  form-control-lg" value="<?=$test['description_produit']?>">
     </div>
+    <div class="form-group">
+      <label for="image_produit">Image</label>
+      <input type="text" name="image_produit" id="image_produit" textarea class="form-control-plaintext " value="<?=$test['image_produit']?>">
     </div>
+    <div class="form-group">
+      <label for="prix_produit">Prix</label>
+      <input type="text" name="prix_produit" id="prix_produit" textarea class="form-control-plaintext " value="<?=$test['prix_produit']?>">
+    </div>
+    <input type="hidden" value="/<?=$test['id_produit']?>">
+    <button>Enregistrer</button>
+</form> -->
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <textarea class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"value="<?=$test['nom_produit']?>">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Example multiple select</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
 </form>
-</br>
-
   </body>
   </html>
