@@ -28,7 +28,7 @@ require_once('connect.php');
                     // Le script s'exécute
                     $query->execute(); 
                     $_SESSION['messageAdd'] = "Produit ajouté !";
-                    header('Location: index.php');
+                    header('Location: principale.php');
                 }
          }
 require_once('close.php');
@@ -58,10 +58,11 @@ require_once('close.php');
     <input type="text" name="nom_produit" id="nom_produit" textarea class="form-control">
     </br>
     <label for="description_produit" class=" h4 text-center">Description:</label>
-    <input type="text" name="description_produit" id="description_produit" textarea class="form-control form-control-lg" >
+    <textarea class="form-control form-control-lg" rows="10" name="description_produit" id="description_produit" placeholder="Description du produit"></textarea>
     </br>
     <label for="image_produit" class=" h4 text-center">Image:</label>
-    <input type="text" name="image_produit" id="image_produit" textarea class="form-control">
+    <input type="text" name="image_produit" id="image_produit" >
+    <!--input type="file" class="form-control-file"...-->
     </br>
     <label for="prix_produit" class=" h4 text-center">Prix:</label>
     <input type="text" name="prix_produit" id="prix_produit" textarea class="form-control">
@@ -70,7 +71,7 @@ require_once('close.php');
                    <div class="row">
                    <div class="col text-center"> 
     <button class="btn btn-success btn-lg">Valider</button>
-    <a href="index.php" class="btn btn-dark btn-lg">Annuler</a>
+    <a href="principale.php" class="btn btn-dark btn-lg">Annuler</a>
     </div>
     </div>
     </div>

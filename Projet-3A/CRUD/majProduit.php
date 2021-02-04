@@ -30,13 +30,13 @@ $test = $query-> fetch();
 //On vérifie si le test (produit) existe
 if (!$test){
     $_SESSION['erreur']="Cet id n'existe pas";
-    header('Location: index.php');
+    header('Location: principale.php');
 }
 
 
 }else{
     $_SESSION['message']="URL invalide";
-    header('Location: index.php');
+    header('Location: principale.php');
 }
 
 
@@ -72,7 +72,7 @@ if (!$test){
                     $query->execute(); 
                     $_SESSION['messageModiSuccess'] = "Produit modifié !";
                     
-                    header('Location: index.php');
+                    header('Location: principale.php');
                 }
          }
 require_once('close.php');
@@ -113,7 +113,7 @@ require_once('close.php');
                                     <td><?= $test['prix_produit'] ?>€</td>
                                     
                                    
-                                    <td><a href="index.php" class="btn btn-light">Retour</a></td>
+                                    <td><a href="principale.php" class="btn btn-light">Retour</a></td>
                                     
                                 </tr>    
                                                                            
@@ -121,16 +121,20 @@ require_once('close.php');
                 </table>
 
                     
-                <h2 class="text-center">Modifier un produit</h2>             
+                <h2 class="text-center">Modifier un produit</h2>  
+            </br>           
   <form method="post">
     <label for="nom_produit"class=" h4 text-center">Produit:</label>
-    <input type="text" name="nom_produit" id="nom_produit" textarea class="form-control" value="<?=$test['nom_produit']?>">
+    <input type="text" name="nom_produit" id="nom_produit" textarea class="form-control" value="<?=$test['nom_produit']?>"></textarea>
     </br>
     <label for="description_produit" class=" h4 text-center">Description:</label>
-    <input type="text" name="description_produit" id="description_produit" textarea class="form-control form-control-lg" value="<?=$test['description_produit']?>">
+    <textarea class="form-control form-control-lg" rows="10" name="description_produit" id="description_produit" placeholder="Description du produit" value="<?=$test['description_produit']?>"></textarea>
     </br>
     <label for="image_produit" class=" h4 text-center">Image:</label>
+    </br>
     <input type="text" name="image_produit" id="image_produit" textarea class="form-control" value="<?=$test['image_produit']?>">
+    <!--input type="file" class="form-control-file"...-->
+    </br>
     </br>
     <label for="prix_produit" class=" h4 text-center">Prix:</label>
     <input type="text" name="prix_produit" id="prix_produit" textarea class="form-control" value="<?=$test['prix_produit']?>">

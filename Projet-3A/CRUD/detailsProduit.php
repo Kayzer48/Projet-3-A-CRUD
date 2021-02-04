@@ -29,13 +29,13 @@ $test = $query-> fetch();
 //On vérifie si le test (produit) existe
 if (!$test){
     $_SESSION['erreur']="Cet id n'existe pas";
-    header('Location: index.php');
+    header('Location: principale.php');
 }
 
 
 }else{
     $_SESSION['erreur']="URL invalide";
-    header('Location: index.php');
+    header('Location: principale.php');
 }
 
 ?>
@@ -126,7 +126,7 @@ if (!$test){
                                     <td><h2><?= $test['description_produit'] ?></h2></td>
                                     <td><img src="<?= $test['image_produit'] ?>" alt="<?= $test['nom_produit'] ?>" title="<?= $test['nom_produit'] ?>"class="img-thumbnail"></td>
                                     <td><h2><?= $test['prix_produit'] ?>€</h2></td>
-                                    <td><a href="index.php" class="btn btn-light">Retour</a></td>
+                                    <td><a href="principale.php" class="btn btn-light">Retour</a></td>
                                     <td><a href="majProduit.php?id=<?=$test['id_produit']?>"class="btn btn-success">Editer</a></td>
                                     <td><a href="suprProduit.php?id=<?=$test['id_produit']?>"class="btn btn-danger" Onclick="return confirm('Voulez-vous vraiment supprimer ce produit');">Supprimer</a></td>
                                 </tr>    

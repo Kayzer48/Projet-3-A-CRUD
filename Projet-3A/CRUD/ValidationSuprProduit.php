@@ -30,13 +30,13 @@ $test = $query-> fetch();
 //On vérifie si le test (produit) existe
 if (!$test){
     $_SESSION['erreur']="Cet id n'existe pas";
-    header('Location: index.php');
+    header('Location: principale.php');
 }
 
 
 }else{
     $_SESSION['erreur']="URL invalide";
-    header('Location: index.php');
+    header('Location: principale.php');
 }
 
 ?>
@@ -55,9 +55,9 @@ if (!$test){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container ">
         <div class="row">
-            <section class="col-12">
+            <section>
             <?php
               if(!empty($_SESSION["erreur"])){
                 echo  '<div class="alert alert-danger" role="alert">
@@ -98,8 +98,8 @@ if (!$test){
             <h1 class="text-center">Le Marché du coin</h1>
             </br>
             <h2 class="text-danger">Vous êtes sur le point de supprimer ce produit, êtes-vous sûr ?</h2>
-            <table class="table table-striped table-danger"> 
-                        <thead class="text-center"> 
+            <table class="table table-striped"> 
+                        <thead class="text-center table-dark"> 
                             <th>id_produit</th>
                             <th>nom_produit</th>
                             <th>description_produit</th>
@@ -110,13 +110,13 @@ if (!$test){
                         </thead>
                         <tbody>
 
-                                <tr class="text-center">
+                                <tr class="text-center table-danger">
                                     <td><h2><?= $test['id_produit'] ?></h2> </td>
                                     <td><h2><?= $test['nom_produit'] ?></h2></td>
                                     <td><h2><?= $test['description_produit'] ?></h2></td>
                                     <td><img src="<?= $test['image_produit'] ?>" alt="<?= $test['nom_produit'] ?>" title="<?= $test['nom_produit'] ?>"class="img-thumbnail"></td>
                                     <td><h2><?= $test['prix_produit'] ?>€</h2></td>
-                                    <td><a href="index.php" class="btn btn-light">Retour</a></td> 
+                                    <td><a href="principale.php" class="btn btn-light">Retour</a></td> 
                                     <td><a href="suprProduit.php?id=<?=$test['id_produit']?>"class="btn btn-danger">Supprimer</a></td>          
                                 </tr>                                
                         </tbody>

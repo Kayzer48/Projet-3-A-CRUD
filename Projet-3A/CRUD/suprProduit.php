@@ -29,13 +29,13 @@ $test = $query-> fetch();
 //On vérifie si le test (produit) existe
 if (!$test){
     $_SESSION['erreur']="Cet id n'existe pas";
-    header('Location: index.php');
+    header('Location: principale.php');
 }
 
 
 }else{
     $_SESSION['erreur']="URL invalide";
-    header('Location: index.php');
+    header('Location: principale.php');
     die();
 }
 // On utilise DELETE FROM...WHERE
@@ -56,5 +56,5 @@ $query-> execute();
 //On récupère le test (produit)
 $test = $query-> fetch();
 $_SESSION['messageSuprSuccess'] = "Produit supprimé !"; 
-                    header('Location: index.php');
+                    header('Location: principale.php');
 ?>
