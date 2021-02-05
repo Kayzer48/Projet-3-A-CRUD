@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 27 jan. 2021 à 14:33
+-- Généré le : ven. 05 fév. 2021 à 08:10
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -42,10 +42,32 @@ CREATE TABLE IF NOT EXISTS `produits` (
 --
 
 INSERT INTO `produits` (`id_produit`, `nom_produit`, `description_produit`, `image_produit`, `prix_produit`) VALUES
-(1, 'Macbook ', 'Macbook', 'img/macbook.jpg', '1199.00'),
-(2, 'Horloge Vintage URSS', 'Horloge Vintage URSS\r\nSuperbe horloge russe des années 1980 en parfait état de marche. \r\nL’une de ses particularité, elle ne fait aucun bruit.\r\nQuelques traces du temps. Numérotée.', 'img/horloge.jpg', '100.00'),
+(1, 'Macbook ', 'Macbook ', 'img/macbook.jpg', '1199.00'),
+(2, 'Horloge Vintage URSS', 'Horloge Vintage URSS', 'img/horloge.jpg', '100.00'),
 (17, 'Mug Vintage CUBA', 'Mug Vintage CUBA', 'img/mug.jpg', '15.00'),
 (18, 'Cafetière italienne', 'Cafetière italienne', 'img/cafetiere.jpg', '30.00');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `utilisateurs`
+--
+
+DROP TABLE IF EXISTS `utilisateurs`;
+CREATE TABLE IF NOT EXISTS `utilisateurs` (
+  `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_utilisateur` varchar(100) NOT NULL,
+  `mot_de_passe` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_utilisateur`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `utilisateurs`
+--
+
+INSERT INTO `utilisateurs` (`id_utilisateur`, `nom_utilisateur`, `mot_de_passe`) VALUES
+(1, 'Chau', 'Williams'),
+(2, 'Guillaume', 'Williams');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
